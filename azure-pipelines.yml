@@ -8,7 +8,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Towards-AzurePortal'
+    azureSubscription: 'Azure subscription 1(2d1ab503-4ce3-4a5a-9c98-8e755ac8946a)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -21,7 +21,7 @@ steps:
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: 'Towards-AzurePortal'
+    azureSubscriptionEndpoint: 'Azure subscription 1(2d1ab503-4ce3-4a5a-9c98-8e755ac8946a)'
     azureResourceGroup: 'TestLab-RG'
     kubernetesCluster: 'testlab-aks'
     namespace: 'default'
@@ -30,6 +30,4 @@ steps:
     configuration: '01_kubernetes_aks'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
-    azureSubscriptionEndpointForSecrets: 'Towards-AzurePortal'
-    azureContainerRegistry: 'mylabacr13.azurecr.io'
-    forceUpdate: false
+    azureSubscriptionEndpointForSecrets: 'Azure subscription 1(2d1ab503-4ce3-4a5a-9c98-8e755ac8946a)'
